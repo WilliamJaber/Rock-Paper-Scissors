@@ -16,6 +16,8 @@ def rock_paper_scissors():
 
         elif (player == 'rock' and computer == 'scissors') or (player == 'paper' and computer == 'rock') or (player == 'scissors' and computer == 'Paper'):
             print(computer + '\nYou Win!')
+            break
+
         else:
             print(computer + '\nYou Lose!')
             break
