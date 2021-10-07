@@ -14,10 +14,10 @@ def rock_paper_scissors():
             print(computer + '\nDraw!')
             break
 
-        elif (player == 'rock' and computer == 'scissors') or (player == 'paper' and computer == 'rock') or (player == 'scissors' and computer == 'Paper'):
+        elif (player == 'rock' and computer == 'scissors') or (player == 'paper' and computer == 'rock') or (player == 'scissors' and computer == 'paper'):
             print(computer + '\nYou Win!')
         else:
-            print(computer + '\nYou Lose!')
-            break
+            print(computer + '\nYou Lose!')            
+            break 
 
 rock_paper_scissors()
