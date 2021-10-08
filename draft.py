@@ -3,17 +3,17 @@ from random import choice
 
 # Generate a random value of Rock, Paper, Scissors for Computer choice
 ## It is best to move these variables within the main function:
-## The reaosn why, these now become global variables to your function, 
+## The reaosn why, these now become global variables to your function,
 ## Keep everything compartamentalized with your functions. Avoid using Global variables when possible:
 ## Source: https://stackoverflow.com/questions/59330578/how-to-avoid-using-global-variables
-list = ['rock', 'paper', 'scissors']  ##(!): You should avoid naming varibales reserved function names like this. 
+list = ['rock', 'paper', 'scissors']  ##(!): You should avoid naming varibales reserved function names like this.
 ## The reason, It pollutes the name space. For example, if you needed to use the list() function you will run into issues
-## So, change this variable to 'lst' or 'list_of_choices' etc... 
+## So, change this variable to 'lst' or 'list_of_choices' etc...
 comp_choices = choice(list)
 
 def rock_paper_scissors():
     # print(comp_choices)
-    """This function Handles the main operation of Rock, Paper, Scissors. 
+    """This function Handles the main operation of Rock, Paper, Scissors.
     The User will input their choice against computer and win."""
 
     ## Make sure your comments are alligned with your code
@@ -33,7 +33,7 @@ def rock_paper_scissors():
         ## Also, because this is a continuation of an if statement, use elif:
         elif comp_choices == 'rock' and user_input == 'paper':
             print(comp_choices)
-            print('YOU WIN!')  
+            print('YOU WIN!')
             break
         elif comp_choices == 'rock' and user_input == 'scissors':
             print(comp_choices)
@@ -76,12 +76,12 @@ rock_paper_scissors()
 NOTES: Try to figure out a different approach to NOT REPEAT yourself with so many lines of code! Here is something to consider,
 there are only there (3) possible outcomes in a match: Win, Lose, Draw! You have seven (7)!
 
-What are all of the combiniation that can be played that will result in your win! Solve for TRUE where player wins. For example, 
+What are all of the combiniation that can be played that will result in your win! Solve for TRUE where player wins. For example,
     If (player == 'rock' and computer =='scissors') OR  (player == 'paper' and ... finish it off)!
-    Clue: It will be a series of "or" statements. 
-    (don't think about the computers) 
+    Clue: It will be a series of "or" statements.
+    (don't think about the computers)
 
- TODO List: 
+ TODO List:
 - Rename 'list' variable
 - Move variables inside function scope
 - Figure out away to not repeat yourself with code! Remember, there are only 3 possible outcomes
