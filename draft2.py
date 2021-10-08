@@ -15,16 +15,16 @@ def rock_paper_scissors():
         while player := input('HEY! what is your choice: '):
 
             if player == computer:
-                print(computer + '\nDraw!\n')
+                print(f'{computer} \nDraw!\n')
                 break
 
             elif (player == 'rock' and computer == 'scissors') or (player == 'paper' and computer == 'rock') or (player == 'scissors' and computer == 'paper'):
-                print(computer + '\nYou Win!\n')
+                print(f'{computer} \nYou Win!\n')
                 player_points += 1
                 break
 
             else:
-                print(computer + '\nYou Lose!\n')
+                print(f'{computer} \nYou Lose!\n')
                 comp_points += 1
                 break
 
