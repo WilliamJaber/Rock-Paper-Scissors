@@ -5,21 +5,39 @@ def rock_paper_scissors():
     """This function Handles the main operation of Rock, Paper, Scissors.
     The User will input their choice against computer and win."""
 
-    lst = ['rock', 'paper', 'scissors']
-    computer = choice(lst)
+    player_points = 0
+    comp_points = 0
+    while player_points < 3 or comp_points < 3:
 
-    while player := input('HEY! what is your choice: '):
+        lst = ['rock', 'paper', 'scissors']
+        computer = choice(lst)
 
-        if player == computer:
-            print(computer + '\nDraw!')
+        while player := input('HEY! what is your choice: '):
+
+            if player == computer:
+                print(computer + '\nDraw!\n')
+                break
+
+            elif (player == 'rock' and computer == 'scissors') or (player == 'paper' and computer == 'rock') or (player == 'scissors' and computer == 'paper'):
+                print(computer + '\nYou Win!\n')
+                player_points += 1
+                break
+
+            else:
+                print(computer + '\nYou Lose!\n')
+                comp_points += 1
+                break
+
+        print(f'You: {player_points}')
+        print(f'Comp: {comp_points}')
+
+        if player_points == 3:
+            print('Congrats! You Won the Game')
             break
 
-        elif (player == 'rock' and computer == 'scissors') or (player == 'paper' and computer == 'rock') or (player == 'scissors' and computer == 'paper'):
-            print(computer + '\nYou Win!')
+        elif comp_points == 3:
+            print('Sorry, You Lost the Game')
             break
 
-        else:
-            print(computer + '\nYou Lose!')            
-            break 
 
 rock_paper_scissors()
