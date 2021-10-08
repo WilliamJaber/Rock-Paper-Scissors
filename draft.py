@@ -19,7 +19,7 @@ def rock_paper_scissors():
     ## Make sure your comments are alligned with your code
 
     # Ask user to input their choice of Rock, Paper, Scissors
-    ## It's cool you used the walrus function here!
+    ## It's cool you used the walrus operator here!
     while user_input := input('HEY! what is your choice: '):
     # if user_input is equal to computer choice then 'tie'
         if user_input == comp_choices:
